@@ -29,5 +29,5 @@ RSpec.describe 'Professor Index Page' do
     expect(@snape.name).to appear_before(@steve.name)
     expect(@steve.name).to_not appear_before(@gilderoy.name)
   end
-
+ 
 end
