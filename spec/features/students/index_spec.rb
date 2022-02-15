@@ -54,4 +54,16 @@ RSpec.describe 'Students Index Page' do
     expect(page).to have_content(@james.name)
     expect(page).to have_content(@james.professors.count)
   end
+
+  it "names are in alphabetical order" do
+
+    visit "/students"
+
+    expect(@dobby.name).to appear_before(@draco.name)
+    expect(@draco.name).to appear_before(@emma.name)
+    expect(@emma.name).to appear_before(@harry.name)
+    expect(@harry.name).to appear_before(@james.name)
+    expect(@james.name).to appear_before(@ron.name)
+    expect(@ron.name).to_not appear_before(@dobby.name)
+  end
 end

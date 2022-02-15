@@ -20,4 +20,14 @@ RSpec.describe 'Professor Index Page' do
     expect(page).to have_content(@snape.age)
     expect(page).to have_content(@snape.specialty)
   end
+
+  it "names are in alphabetical order" do
+
+    visit "/professors"
+
+    expect(@gilderoy.name).to appear_before(@snape.name)
+    expect(@snape.name).to appear_before(@steve.name)
+    expect(@steve.name).to_not appear_before(@gilderoy.name)
+  end
+
 end

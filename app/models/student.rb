@@ -10,4 +10,8 @@ class Student <ApplicationRecord
     average(:age).round(1)
   end
 
+  def self.alphabetical
+    order(:name)
+  end
+
 end
