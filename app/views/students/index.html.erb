@@ -1,0 +1,7 @@
+<h1>Students:</h1>
+
+<% @students.each do |kid| %>
+<p>----------------</p>
+<p>Name: <%= kid.name %> </p>
+<p>How many Professors: <%= kid.professors.count %> </p>
+<% end %>

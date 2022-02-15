@@ -1,0 +1,10 @@
+<h1>Professor: <%= @professor.name %>  </h1>
+
+<p>Students:</p>
+
+<% @students.each do |kid| %>
+<p>---------------</p>
+<p>Name: <%= kid.name %> </p>
+<p>Age: <%= kid.age %> </p>
+<p>House: <%= kid.house %> </p>
+<% end %>
