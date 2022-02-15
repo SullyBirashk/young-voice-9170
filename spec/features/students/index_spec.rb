@@ -54,8 +54,4 @@ RSpec.describe 'Students Index Page' do
     expect(page).to have_content(@james.name)
     expect(page).to have_content(@james.professors.count)
   end
-
-  it "Shows Average age of all professors" do
-
-  end
 end
