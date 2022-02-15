@@ -1,3 +1,3 @@
-class Professor <ApplicationRecord
+class Professor < ApplicationRecord
 
 end
